@@ -38,7 +38,7 @@ class Snowflake {
     this.initialAngle = random(0, 360);
     this.size = random(1.5, 4.5);
     this.radius = sqrt(random(pow(width / 2, 2)));
-    this.color = color(random(200, 256), random(200, 256), random(200, 256));
+    this.color = color(random(180,220), random(200, 256), random(200, 256));
   }
 
   update(time) {
@@ -62,7 +62,11 @@ class Snowflake {
   }
 
   display() {
-    fill(red(this.color), green(this.color), blue(this.color), 120);
+    fill(
+      red(this.color), 
+      green(this.color), 
+      blue(this.color),
+       120);
     noStroke();
     ellipse(this.posX, this.posY, this.size);
   }
