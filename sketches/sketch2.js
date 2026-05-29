@@ -45,8 +45,6 @@ class Snowflake {
     // Define angular speed (degrees / second)
     let angularSpeed = 35;
 
-    this.posX += sin(time + this.initialAngle) * 0.5;
-
     // Calculate the current angle
     let angle = this.initialAngle + angularSpeed * time;
 
