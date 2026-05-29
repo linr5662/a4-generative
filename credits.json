@@ -1,14 +1,14 @@
 {
   "sketch1": {
-    "title": "source 1 title",
-    "author": "source 1 author",
-    "date": "source 1 date",
-    "source": "source 1 url"
+    "title": "Recursive Tree",
+    "author": "Dan Shiffman, Darren Kessner, p5.js Contributors",
+    "date": "2024",
+    "source": "https://p5js.org/examples/repetition-recursive-tree/"
   },
   "sketch2": {
-    "title": "source 2 title",
-    "author": "source 2 author",
-    "date": "source 2 date",
-    "source": "source 2 url"
+    "title": "Snowflakes",
+    "author": "Aatish Bhatia, Darren Kessner, p5.js Contributors",
+    "date": "2024",
+    "source": "https://p5js.org/examples/classes-and-objects-snowflakes/"
   }
 }
