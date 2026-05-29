@@ -19,7 +19,7 @@ function draw() {
 
   // Draw a line 120 pixels
   stroke((frameCount * 2) % 360, 200, 255);
-    line(0, 0, 0, -120);
+  line(0, 0, 0, -120);
 
   // Move to the end of that line
   translate(0, -120);
@@ -34,7 +34,7 @@ function draw() {
 
 function branch(h, level) {
   // Set the hue based on the recursion level
-  stroke(level * 25, 255, 255);
+   stroke((level * 25 + frameCount) % 360, 255, 255);
 
   // Each branch will be 2/3 the size of the previous one
   h *= 0.66;
