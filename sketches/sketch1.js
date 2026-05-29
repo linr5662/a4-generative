@@ -33,6 +33,7 @@ function draw() {
 }
 
 function branch(h, level) {
+  // To make the color changes more natural.
   // Set the hue based on the recursion level
    stroke((level * 25 + frameCount) % 360, 255, 255);
 
@@ -63,7 +64,8 @@ function branch(h, level) {
 
     // Draw the left branch
     push();
-    rotate(-angle);
+    // Not quite right
+    rotate(-angle + cos(level * 10) * 1.5);
     line(0, 0, 0, -h);
     translate(0, -h);
     branch(h, level + 1);
