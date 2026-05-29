@@ -66,7 +66,7 @@ class Snowflake {
       red(this.color), 
       green(this.color), 
       blue(this.color),
-       120);
+       140);
     noStroke();
     ellipse(this.posX, this.posY, this.size);
   }
