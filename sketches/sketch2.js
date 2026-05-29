@@ -36,7 +36,7 @@ class Snowflake {
     this.posX = 0;
     this.posY = random(-height, 0);
     this.initialAngle = random(0, 360);
-    this.size = random(2, 5);
+    this.size = random(1.5, 4.5);
     this.radius = sqrt(random(pow(width / 2, 2)));
     this.color = color(random(200, 256), random(200, 256), random(200, 256));
   }
