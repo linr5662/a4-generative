@@ -18,8 +18,8 @@ function draw() {
   translate(width / 2, height);
 
   // Draw a line 120 pixels
-  stroke(25, 200, 255);
-  line(0, 0, 0, -120);
+  stroke((frameCount * 2) % 360, 200, 255);
+    line(0, 0, 0, -120);
 
   // Move to the end of that line
   translate(0, -120);
