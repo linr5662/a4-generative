@@ -7,7 +7,7 @@ function setup() {
   angleMode(DEGREES);
 
   // Create snowflake objects
-  for (let i = 0; i < 700; i++) {
+  for (let i = 0; i < 600; i++) {
     // Add a new snowflake object to the array
     snowflakes.push(new Snowflake());
   }
