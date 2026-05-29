@@ -49,7 +49,7 @@ class Snowflake {
     let angle = this.initialAngle + angularSpeed * time;
 
     // x position follows a sine wave
-    this.posX = width / 2 + this.radius * sin(angle);
+    this.posX = width / 2 + this.radius * sin(angle)+ sin(time + this.initialAngle) * 6;;
 
     // Different size snowflakes fall at different y speeds
     let ySpeed = 8 / this.size;
