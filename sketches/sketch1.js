@@ -46,7 +46,8 @@ function branch(h, level) {
     push();
 
     // Rotate by angle
-    rotate(angle);
+    // Branch angle fine-tuning
+     rotate(angle + sin(level * 10) * 1.5);
 
     // Draw the branch
     line(0, 0, 0, -h);
