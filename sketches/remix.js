@@ -45,8 +45,7 @@ function draw() {
 }
 
 function branch(h, level) {
-  stroke(level * 25, 255, 255);
-
+  stroke((level * 25 + frameCount) % 360, 255, 255);
   h *= 0.66;
 
   if (h > 2) {
