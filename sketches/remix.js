@@ -1,5 +1,6 @@
 let angle;
 let snowflakes = [];
+let windStrength = 0
 
 function setup() {
   createCanvas(800, 600);
