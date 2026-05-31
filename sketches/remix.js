@@ -21,7 +21,7 @@ function draw() {
 
   angle = (mouseX / width) * 40;
   angle = min(angle, 90);
-  windStrength = map(angle, 0, 90, -5, 5);
+  windStrength = map(angle, 0, 40, -10, 10);
 
   push();
 
