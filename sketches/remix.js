@@ -97,7 +97,7 @@ class Snowflake {
   sin(time + this.initialAngle) * 6 +
   windStrength;
 
-    let ySpeed = 8 / this.size;
+    let ySpeed = 8 / this.size + abs(windStrength) * 0.2;
     this.posY += ySpeed;
 
     if (this.posY > height) {
