@@ -1,6 +1,6 @@
 let angle;
 let snowflakes = [];
-let windStrength = 0
+let windStrength = 0;
 
 function setup() {
   createCanvas(800, 600);
@@ -21,6 +21,7 @@ function draw() {
 
   angle = (mouseX / width) * 40;
   angle = min(angle, 90);
+  windStrength = map(angle, 0, 90, -5, 5);
 
   push();
 
@@ -90,10 +91,11 @@ class Snowflake {
 
     let snowAngle = this.initialAngle + angularSpeed * time;
 
-    this.posX =
-      width / 2 +
-      this.radius * sin(snowAngle) +
-      sin(time + this.initialAngle) * 6;
+  this.posX =
+  width / 2 +
+  this.radius * sin(snowAngle) +
+  sin(time + this.initialAngle) * 6 +
+  windStrength;
 
     let ySpeed = 8 / this.size;
     this.posY += ySpeed;
