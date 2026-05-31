@@ -27,7 +27,7 @@ function draw() {
 
   translate(width / 2, height);
 
-  stroke(25, 200, 255);
+  stroke(mouseX / 2, 200, 255);
   line(0, 0, 0, -120);
 
   translate(0, -120);
