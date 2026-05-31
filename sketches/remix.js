@@ -107,10 +107,10 @@ class Snowflake {
 
   display() {
     fill(
-      red(this.color),
-      green(this.color),
-      blue(this.color),
-      140
+     red(this.color),
+     green(this.color),
+     blue(this.color),
+     140 + abs(windStrength) * 5
     );
 
     noStroke();
