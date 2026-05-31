@@ -114,6 +114,10 @@ class Snowflake {
     );
 
     noStroke();
-    ellipse(this.posX, this.posY, this.size);
+    ellipse(
+     this.posX,
+     this.posY,
+     this.size + abs(windStrength) * 0.2
+     );
   }
 }
