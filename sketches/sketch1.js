@@ -12,12 +12,13 @@ function draw() {
   // Calculate the angle based on the mouse position, maximum 90 degrees
   angle = (mouseX / width) * 40;
   angle = min(angle, 90);
+  angle += sin(frameCount * 0.02) * 2;
 
   // Start the tree from the bottom of the screen
   translate(width / 2, height);
 
   // Draw a line 120 pixels
-  stroke(25, 200, 255);
+  stroke((frameCount * 2) % 360, 200, 255);
   line(0, 0, 0, -120);
 
   // Move to the end of that line
@@ -32,8 +33,9 @@ function draw() {
 }
 
 function branch(h, level) {
+  // To make the color changes more natural.
   // Set the hue based on the recursion level
-  stroke(level * 25, 255, 255);
+   stroke((level * 25 + frameCount) % 360, 255, 255);
 
   // Each branch will be 2/3 the size of the previous one
   h *= 0.66;
@@ -45,7 +47,8 @@ function branch(h, level) {
     push();
 
     // Rotate by angle
-    rotate(angle);
+    // Branch angle fine-tuning
+     rotate(angle + sin(level * 10) * 1.5);
 
     // Draw the branch
     line(0, 0, 0, -h);
@@ -61,7 +64,8 @@ function branch(h, level) {
 
     // Draw the left branch
     push();
-    rotate(-angle);
+    // Not quite right
+    rotate(-angle + cos(level * 10) * 1.5);
     line(0, 0, 0, -h);
     translate(0, -h);
     branch(h, level + 1);
