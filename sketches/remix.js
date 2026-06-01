@@ -135,4 +135,7 @@ function mousePressed() {
   for (let i = 0; i < 100; i++) {
     snowflakes.push(new Snowflake());
   }
+ if (snowflakes.length > 1200) {
+    snowflakes.splice(0, 200);
+  }
 }
