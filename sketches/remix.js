@@ -14,6 +14,7 @@ function setup() {
   }
 }
 
+// The stronger the wind, the heavier the snow.
 function draw() {
   background(50 + abs(windStrength) * 5);
 
@@ -131,7 +132,7 @@ class Snowflake {
 
 // Each click increases the number of snowflakes.
 function mousePressed() {
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 100; i++) {
     snowflakes.push(new Snowflake());
   }
 }
