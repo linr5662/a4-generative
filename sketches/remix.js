@@ -141,3 +141,12 @@ function mousePressed() {
     snowflakes.splice(0, 200);
   }
 }
+function keyPressed() {
+  if (key === '1') {
+    snowflakes = [];
+    for (let i = 0; i < 600; i++) {
+      snowflakes.push(new Snowflake());
+    }
+    windStrength = 0;
+  }
+}
