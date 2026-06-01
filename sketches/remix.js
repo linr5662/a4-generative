@@ -51,6 +51,7 @@ function branch(h, level) {
   h *= 0.66;
 
   if (h > 2) {
+    
     push();
 
     rotate(angle);
@@ -68,6 +69,12 @@ function branch(h, level) {
     branch(h, level + 1);
 
     pop();
+  }
+  // To make the tree's branches denser.
+    else {
+    fill(120, 255, 255);
+    noStroke();
+    ellipse(0, 0, 5, 5);
   }
 }
 
@@ -121,6 +128,8 @@ class Snowflake {
      );
   }
 }
+
+// Each click increases the number of snowflakes.
 function mousePressed() {
   for (let i = 0; i < 300; i++) {
     snowflakes.push(new Snowflake());
