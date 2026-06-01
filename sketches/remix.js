@@ -55,6 +55,7 @@ function branch(h, level) {
     
     push();
 
+  // Let the tree also bend with the wind
     rotate(angle + windStrength * 0.2);
     line(0, 0, 0, -h);
     translate(0, -h);
@@ -64,7 +65,7 @@ function branch(h, level) {
 
     push();
 
-    rotate(-angle);
+    rotate(-angle + windStrength * 0.2);
     line(0, 0, 0, -h);
     translate(0, -h);
     branch(h, level + 1);
