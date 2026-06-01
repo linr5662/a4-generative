@@ -121,3 +121,8 @@ class Snowflake {
      );
   }
 }
+function mousePressed() {
+  for (let i = 0; i < 300; i++) {
+    snowflakes.push(new Snowflake());
+  }
+}
