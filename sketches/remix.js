@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(50);
+  background(50 + abs(windStrength) * 5);
 
   // TREE -------------------------
 
